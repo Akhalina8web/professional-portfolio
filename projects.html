@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills & Projects | Alina Khalina</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">ALINA KHALINA</div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Skills & Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="skills-section">
+            <h1>Skills</h1>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <div class="skill-icon">HTML</div>
+                    <h2>HTML</h2>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">CSS</div>
+                    <h2>CSS</h2>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">JS</div>
+                    <h2>JavaScript</h2>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">B</div>
+                    <h2>Brightspace</h2>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">☆</div>
+                    <h2>Accessibility</h2>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">✎</div>
+                    <h2>Content Development</h2>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="projects-section" id="projects">
+
+            <h1>Projects</h1>
+
+            <p class="projects-intro">
+                A selection of projects I've created during my web design journey.
+            </p>
+
+            <div class="projects-grid">
+
+    <!-- Project 1 -->
+    <article class="project-card">
+        <img
+            src="images/first-html-project.png"
+            alt="Preview of a beginner HTML page about Latin dancing in Edmonton."
+            class="project-image"
+            onclick="openLightbox(this)"
+        >
+
+        <h2>My First HTML Page</h2>
+
+        <p>
+            My first web page built with semantic HTML, headings,
+            lists, images, and text content.
+        </p>
+
+        <a
+            href="https://akhalina8web.github.io/New-Start-Project/"
+            class="project-button"
+            target="_blank"
+        >
+            View Project
+        </a>
+    </article>
+
+
+    <!-- Project 2 -->
+    <article class="project-card">
+        <img
+            src="images/summer-with-a-friend-preview.png"
+            alt="Preview of the Summer Memories multi-page website with navigation and styled photo content."
+            class="project-image"
+            onclick="openLightbox(this)"
+        >
+
+        <h2>Multi-Page Website</h2>
+
+        <p>
+            Multi-page website featuring navigation, styled content,
+            images, and CSS layouts.
+        </p>
+
+        <a
+            href="https://akhalina8web.github.io/CSS-week3-HW3/"
+            class="project-button"
+            target="_blank"
+        >
+            View Project
+        </a>
+    </article>
+
+
+    <!-- Project 3 -->
+    <article class="project-card">
+        <img
+            src="images/banff-photo-gallery-preview.png"
+            alt="Preview of a responsive Lake Louise and Banff photo gallery with mountain and nature images."
+            class="project-image"
+            onclick="openLightbox(this)"
+        >
+
+        <h2>Responsive Photo Gallery</h2>
+
+        <p>
+            Responsive photo gallery exploring CSS layouts,
+            image styling, and responsive design.
+        </p>
+
+        <a
+            href="https://akhalina8web.github.io/RD-week4-final_project_starter/"
+            class="project-button"
+            target="_blank"
+        >
+            View Project
+        </a>
+    </article>
+
+
+    <!-- Project 4 -->
+    <article class="project-card">
+        <img
+            src="images/interactive-javascript-gallery-preview.png"
+            alt="Preview of an interactive JavaScript photo gallery displayed on a laptop screen."
+            class="project-image"
+            onclick="openLightbox(this)"
+        >
+
+        <h2>Interactive JavaScript Gallery</h2>
+
+        <p>
+            Interactive image gallery using JavaScript,
+            image interactions, and dynamic content.
+        </p>
+
+        <a
+            href="https://akhalina8web.github.io/js-final-gallery-assignment/"
+            class="project-button"
+            target="_blank"
+        >
+            View Project
+        </a>
+    </article>
+
+</div>
+        </section>
+
+    </main>
+
+   <footer class="site-footer">
+
+    <div class="footer-connect">
+        <p>Let's connect!</p>
+
+        <div class="social-links">
+            <a target="_blank"
+               href="https://www.linkedin.com/in/alina-khalina-44995634a"
+               aria-label="LinkedIn">in</a>
+
+            <a href="mailto:contact@alinakhalina.com"
+               aria-label="Email">✉</a>
+
+            <a target="_blank"
+               href="https://github.com/Akhalina8web"
+               aria-label="GitHub">GH</a>
+        </div>
+    </div>
+
+    <div class="footer-right">
+        <p>© 2026 Alina Khalina · All rights reserved.</p>
+    </div>
+
+</footer>
+<div id="lightbox" class="lightbox">
+    <button class="lightbox-close" aria-label="Close image">&times;</button>
+    <img id="lightbox-image"
+     src="images/interactive-javascript-gallery-preview.png"
+     alt="">
+</div>
+
+<script>
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightbox-image");
+const closeButton = document.querySelector(".lightbox-close");
+
+function openLightbox(image) {
+    lightboxImage.src = image.src;
+    lightboxImage.alt = image.alt;
+    lightbox.classList.add("show");
+}
+
+closeButton.addEventListener("click", function () {
+    lightbox.classList.remove("show");
+});
+
+lightbox.addEventListener("click", function (event) {
+    if (event.target === lightbox) {
+        lightbox.classList.remove("show");
+    }
+});
+</script>
+</body>
+
+</html>
