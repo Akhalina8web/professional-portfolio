@@ -801,3 +801,131 @@ textarea:focus {
     outline: 2px solid #39462a;
     outline-offset: 2px;
 }
+/* =========================================
+   PORTFOLIO COLOR REFRESH
+   Sage + Cream + Soft Peach
+   ========================================= */
+
+:root {
+    --olive: #7f8f5b;
+    --olive-dark: #657346;
+    --sage-light: #e7ebdc;
+    --cream: #f8f5ee;
+    --peach: #e8b9a7;
+    --peach-light: #f4ded5;
+    --text-dark: #2f302b;
+    --text-soft: #66685f;
+    --white: #ffffff;
+}
+
+/* Overall page */
+body {
+    background-color: var(--cream);
+    color: var(--text-dark);
+}
+
+/* Header */
+header {
+    background-color: rgba(248, 245, 238, 0.96);
+}
+
+/* Navigation */
+nav a {
+    color: var(--text-dark);
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--olive-dark);
+}
+
+/* Main headings */
+h1,
+h2,
+h3 {
+    color: var(--text-dark);
+}
+
+/* Small intro text – e.g. "Hi, I'm" */
+.hero-text > p:first-child {
+    color: var(--olive-dark);
+    font-weight: 600;
+}
+
+/* Main buttons */
+.btn,
+button {
+    background-color: var(--olive-dark);
+    color: var(--white);
+    border: 2px solid var(--olive-dark);
+    transition: all 0.25s ease;
+}
+
+.btn:hover,
+.btn:focus,
+button:hover,
+button:focus {
+    background-color: var(--peach);
+    border-color: var(--peach);
+    color: var(--text-dark);
+    transform: translateY(-2px);
+}
+
+/* Skill / feature cards */
+.feature,
+.skill-card,
+.project-card {
+    background-color: rgba(255, 255, 255, 0.55);
+    border-color: #d8dccd;
+    transition: all 0.25s ease;
+}
+
+.feature:hover,
+.skill-card:hover,
+.project-card:hover {
+    background-color: var(--sage-light);
+    transform: translateY(-4px);
+}
+
+/* Icons */
+.feature i,
+.skill-card i,
+.project-card i {
+    color: var(--olive-dark);
+}
+
+/* Links */
+main a {
+    color: var(--olive-dark);
+}
+
+main a:hover {
+    color: #a66f61;
+}
+
+/* Images – subtle warm professional frame */
+.hero img,
+.about img {
+    border: 3px solid rgba(127, 143, 91, 0.22);
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--sage-light);
+    border-top: 1px solid #d4dac5;
+}
+
+/* Social links */
+.social-links a {
+    color: var(--olive-dark);
+}
+
+.social-links a:hover {
+    color: #b77868;
+}
+
+/* Text selection – tiny designer detail :) */
+::selection {
+    background: var(--peach);
+    color: var(--text-dark);
+}
